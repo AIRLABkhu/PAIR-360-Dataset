@@ -142,16 +142,73 @@
 </section>
 <!-- End teaser video -->
 
+<style>
+  .column h3 {
+    font-size: 24px; /* 폰트 크기 조정 */
+  }
+
+  .column ul li {
+    font-size: 18px; /* 폰트 크기 조정 */
+  }
+
+</style>
 <!-- Paper abstract -->
 <section class="section hero is-light">
-  <div class="container is-max-desktop">
+  <div class="container is-fullhd"> 
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3">PAIR360 Dataset</h2>
+        <ul>        
+          <li>This dataset provides 360 equirectangular image set with LiDAR point cloud from <br>
+          Insta360 pro2 - Velodyne VLP-32C system </li>
+
+        </ul>
+        <div>
+          <br><br>
+        </div>
+
         <div class="content has-text-justified">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
+          <div class="columns">
+            <div class="column">
+              <h3>Data</h3>
+              <ul>
+                <li>360 equirectangular images (7680 x 3840)
+                  <ul>
+                    <li>RGB</li>
+                    <li>Depth</li>
+                  </ul>
+                </li>
+                <li>Fish eye images (3840 x 2880)
+                  <ul>
+                    <li>RGB</li>
+                  </ul>
+                </li>
+                <li>LiDAR point cloud (32 channels)</li>
+                <li>Gyroscope and GPS</li>
+              </ul>
+              <h3>Weather condition</h3>
+              <ul>
+                <li>Sunny</li>
+                <li>Cloudy</li>
+              </ul>
+            </div>
+            <div class="column">
+              <h3>Area</h3>
+              <ul>
+                <li>We capture 7 areas for 3 days in the Kyunghee University International Campus 
+                  <ul>
+                    <li>College of Engineering (3.41km)</li>
+                    <li>College of Life Science (2.45km)</li>
+                    <li>College of Physical Education (2.07km)</li>
+                    <li>Central Library (5.33km)</li>
+                    <li>1st Dormitory (2.43km)</li>
+                    <li>2nd Dormitory (3.32km)</li>
+                    <li>Parking Lot & Peace Amphitheater (5.46km)</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
