@@ -43,6 +43,41 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+
+  <!-- <style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 10px;
+    }
+  </style> -->
+
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    .item table {
+      margin-left: auto; 
+      margin-right: auto; 
+      display: block;
+      width: 70%; /* 표의 너비를 70%로 설정 */
+      font-size: 16px; /* 글자 크기를 조정 */
+    }
+    .item th, .item td {
+      padding: 15px; /* 셀의 안쪽 여백을 넓힙니다. */
+    }
+  </style>
+  
+  <style>
+    .license-text {
+      background-color: #D3D3D3; /* 이 부분에서 회색 배경색을 지정합니다. */
+      padding: 15px; /* 이 부분에서 텍스트와 테두리 사이의 여백을 지정합니다. */
+    }
+  </style>
+
 </head>
 <body>
 
@@ -135,7 +170,7 @@
         type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        Sample Video: College of Life Sciences to College of Physical Education.  
+        Panorama projection sample video: Sequence0 in College of Physical Education area. 
       </h2>
     </div>
   </div>
@@ -183,19 +218,20 @@
                     <li>RGB</li>
                   </ul>
                 </li>
-                <li>LiDAR point cloud (32 channels)</li>
+                <li>LiDAR point clouds (32 channels)</li>
                 <li>Gyroscope and GPS</li>
               </ul>
               <h3>Weather condition</h3>
               <ul>
                 <li>Sunny</li>
                 <li>Cloudy</li>
+                <li>Dawning</li>
               </ul>
             </div>
             <div class="column">
               <h3>Area</h3>
               <ul>
-                <li>We capture 7 areas for 3 days in the Kyunghee University International Campus 
+                <li>We capture 7 areas for 3 times in the Kyunghee University International Campus
                   <ul>
                     <li>College of Engineering (3.41km)</li>
                     <li>College of Life Science (2.45km)</li>
@@ -260,16 +296,528 @@
 <!-- Sensor Setup & Data Area -->
 <section class="container is-max-desktop">
   <div class="hero-body">
-    <h2 class="title">Sensor Setup & Data Area</h2>
-
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel" style="text-align: center;">
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static\images\sensor_setup_data_area.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Directory layout for a single sequence. 
+        </h2>
+        </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/insta_cam.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          The Insta360 pro2 has six lenses, and they store original fisheye video. we store extract fisheye images and saved each origin'#' folder.
+          The z-axis is front of camera.
+        </h2>
+      </div>
+    </div>
+    <!-- <h2 class="title">Sensor Setup & Data Area</h2>
     <img src="static\images\sensor_setup_data_area.jpg" >
-
     <h2 class="subtitle has-text-centered">
       Directory layout for a single sequence.  
-    </h2>
+    </h2> -->
   </div>
 </section>
 <!-- Sensor Setup & Data Area -->
+
+
+<!-- Dataset Distribution Area -->
+<!-- <section class="hero is-small"> -->
+<section class="container is-max-desktop">
+  <div class="hero-body">
+    <h2 class="title">Data Distribution</h2>
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel" style="text-align: center;">
+        <div class="item">
+          <!-- Table here -->
+          <h2 class="title has-text-centered">
+            Traversal 1.
+          </h2>
+          <table>
+            <tr>
+              <th>Area</th>
+              <th>Sequence</th>
+              <th>Dataset</th>
+              <th>Calibration</th>
+            </tr>
+            <!-- Table content -->
+            <tr>
+                <th rowspan="4"> College of Engineering </th>
+                <td>0</td>
+                <td><a href="https://example.com/2-2">0</a></td>
+                <td><a href="https://example.com/2-2">0</a></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td><a href="https://example.com/2-2">1</a></td>
+              <td><a href="https://example.com/2-2">1</a></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><a href="https://example.com/2-2">2</a></td>
+              <td><a href="https://example.com/2-2">2</a></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><a href="https://example.com/2-2">3</a></td>
+              <td><a href="https://example.com/2-2">3</a></td>
+            </tr>
+            <tr>
+                <th rowspan="4"> College of Life Science  </th>
+                <td>0</td>
+                <td><a href="https://example.com/2-2">0</a></td>
+                <td><a href="https://example.com/2-2">0</a></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td><a href="https://example.com/2-2">1</a></td>
+              <td><a href="https://example.com/2-2">1</a></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><a href="https://example.com/2-2">2</a></td>
+              <td><a href="https://example.com/2-2">2</a></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><a href="https://example.com/2-2">3</a></td>
+              <td><a href="https://example.com/2-2">3</a></td>
+            </tr>
+            <tr>
+              <th rowspan="4"> College of Physical Education </th>
+              <td>0</td>
+              <td><a href="https://example.com/2-2">0</a></td>
+              <td><a href="https://example.com/2-2">0</a></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td><a href="https://example.com/2-2">1</a></td>
+            <td><a href="https://example.com/2-2">1</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><a href="https://example.com/2-2">2</a></td>
+            <td><a href="https://example.com/2-2">2</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><a href="https://example.com/2-2">3</a></td>
+            <td><a href="https://example.com/2-2">3</a></td>
+          </tr>
+            <tr>
+              <th rowspan="4"> Central Library </th>
+              <td>0</td>
+              <td><a href="https://example.com/2-2">0</a></td>
+              <td><a href="https://example.com/2-2">0</a></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td><a href="https://example.com/2-2">1</a></td>
+            <td><a href="https://example.com/2-2">1</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><a href="https://example.com/2-2">2</a></td>
+            <td><a href="https://example.com/2-2">2</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><a href="https://example.com/2-2">3</a></td>
+            <td><a href="https://example.com/2-2">3</a></td>
+          </tr>
+            <tr>
+              <th rowspan="4"> 1st Dormitory </th>
+              <td>0</td>
+              <td><a href="https://example.com/2-2">0</a></td>
+              <td><a href="https://example.com/2-2">0</a></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td><a href="https://example.com/2-2">1</a></td>
+            <td><a href="https://example.com/2-2">1</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><a href="https://example.com/2-2">2</a></td>
+            <td><a href="https://example.com/2-2">2</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><a href="https://example.com/2-2">3</a></td>
+            <td><a href="https://example.com/2-2">3</a></td>
+          </tr>
+            <tr>
+              <th rowspan="4"> 2nd Dormitory </th>
+              <td>0</td>
+              <td><a href="https://example.com/2-2">0</a></td>
+              <td><a href="https://example.com/2-2">0</a></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td><a href="https://example.com/2-2">1</a></td>
+            <td><a href="https://example.com/2-2">1</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><a href="https://example.com/2-2">2</a></td>
+            <td><a href="https://example.com/2-2">2</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><a href="https://example.com/2-2">3</a></td>
+            <td><a href="https://example.com/2-2">3</a></td>
+          </tr>
+            <tr>
+              <th rowspan="4"> Parking Lot & Peace Amphitheater </th>
+              <td>0</td>
+              <td><a href="https://example.com/2-2">0</a></td>
+              <td><a href="https://example.com/2-2">0</a></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td><a href="https://example.com/2-2">1</a></td>
+            <td><a href="https://example.com/2-2">1</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><a href="https://example.com/2-2">2</a></td>
+            <td><a href="https://example.com/2-2">2</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><a href="https://example.com/2-2">3</a></td>
+            <td><a href="https://example.com/2-2">3</a></td>
+          </tr>
+            <!-- More rows as needed -->
+          </table>
+        </div>
+        <div class="item">
+          <h2 class="title has-text-centered">
+            Traversal 2.
+          </h2>
+          <table>
+            <tr>
+              <th>Area</th>
+              <th>Sequence</th>
+              <th>Dataset</th>
+              <th>Calibration</th>
+            </tr>
+            <!-- Table content -->
+            <tr>
+                <th rowspan="4"> College of Engineering </th>
+                <td>0</td>
+                <td><a href="https://example.com/2-2">0</a></td>
+                <td><a href="https://example.com/2-2">0</a></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td><a href="https://example.com/2-2">1</a></td>
+              <td><a href="https://example.com/2-2">1</a></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><a href="https://example.com/2-2">2</a></td>
+              <td><a href="https://example.com/2-2">2</a></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><a href="https://example.com/2-2">3</a></td>
+              <td><a href="https://example.com/2-2">3</a></td>
+            </tr>
+            <tr>
+                <th rowspan="4"> College of Life Science  </th>
+                <td>0</td>
+                <td><a href="https://example.com/2-2">0</a></td>
+                <td><a href="https://example.com/2-2">0</a></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td><a href="https://example.com/2-2">1</a></td>
+              <td><a href="https://example.com/2-2">1</a></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><a href="https://example.com/2-2">2</a></td>
+              <td><a href="https://example.com/2-2">2</a></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><a href="https://example.com/2-2">3</a></td>
+              <td><a href="https://example.com/2-2">3</a></td>
+            </tr>
+            <tr>
+              <th rowspan="4"> College of Physical Education </th>
+              <td>0</td>
+              <td><a href="https://example.com/2-2">0</a></td>
+              <td><a href="https://example.com/2-2">0</a></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td><a href="https://example.com/2-2">1</a></td>
+            <td><a href="https://example.com/2-2">1</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><a href="https://example.com/2-2">2</a></td>
+            <td><a href="https://example.com/2-2">2</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><a href="https://example.com/2-2">3</a></td>
+            <td><a href="https://example.com/2-2">3</a></td>
+          </tr>
+            <tr>
+              <th rowspan="4"> Central Library </th>
+              <td>0</td>
+              <td><a href="https://example.com/2-2">0</a></td>
+              <td><a href="https://example.com/2-2">0</a></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td><a href="https://example.com/2-2">1</a></td>
+            <td><a href="https://example.com/2-2">1</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><a href="https://example.com/2-2">2</a></td>
+            <td><a href="https://example.com/2-2">2</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><a href="https://example.com/2-2">3</a></td>
+            <td><a href="https://example.com/2-2">3</a></td>
+          </tr>
+            <tr>
+              <th rowspan="4"> 1st Dormitory </th>
+              <td>0</td>
+              <td><a href="https://example.com/2-2">0</a></td>
+              <td><a href="https://example.com/2-2">0</a></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td><a href="https://example.com/2-2">1</a></td>
+            <td><a href="https://example.com/2-2">1</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><a href="https://example.com/2-2">2</a></td>
+            <td><a href="https://example.com/2-2">2</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><a href="https://example.com/2-2">3</a></td>
+            <td><a href="https://example.com/2-2">3</a></td>
+          </tr>
+            <tr>
+              <th rowspan="4"> 2nd Dormitory </th>
+              <td>0</td>
+              <td><a href="https://example.com/2-2">0</a></td>
+              <td><a href="https://example.com/2-2">0</a></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td><a href="https://example.com/2-2">1</a></td>
+            <td><a href="https://example.com/2-2">1</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><a href="https://example.com/2-2">2</a></td>
+            <td><a href="https://example.com/2-2">2</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><a href="https://example.com/2-2">3</a></td>
+            <td><a href="https://example.com/2-2">3</a></td>
+          </tr>
+            <!-- More rows as needed -->
+          </table>
+        </div>
+        <div class="item">
+          <h2 class="title has-text-centered">
+            Traversal 3.
+          </h2>
+          <table>
+            <tr>
+              <th>Area</th>
+              <th>Sequence</th>
+              <th>Dataset</th>
+              <th>Calibration</th>
+            </tr>
+            <!-- Table content -->
+            <tr>
+                <th rowspan="4"> College of Engineering </th>
+                <td>0</td>
+                <td><a href="https://example.com/2-2">0</a></td>
+                <td><a href="https://example.com/2-2">0</a></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td><a href="https://example.com/2-2">1</a></td>
+              <td><a href="https://example.com/2-2">1</a></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><a href="https://example.com/2-2">2</a></td>
+              <td><a href="https://example.com/2-2">2</a></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><a href="https://example.com/2-2">3</a></td>
+              <td><a href="https://example.com/2-2">3</a></td>
+            </tr>
+            <tr>
+                <th rowspan="4"> College of Life Science  </th>
+                <td>0</td>
+                <td><a href="https://example.com/2-2">0</a></td>
+                <td><a href="https://example.com/2-2">0</a></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td><a href="https://example.com/2-2">1</a></td>
+              <td><a href="https://example.com/2-2">1</a></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><a href="https://example.com/2-2">2</a></td>
+              <td><a href="https://example.com/2-2">2</a></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><a href="https://example.com/2-2">3</a></td>
+              <td><a href="https://example.com/2-2">3</a></td>
+            </tr>
+            <tr>
+              <th rowspan="4"> College of Physical Education </th>
+              <td>0</td>
+              <td><a href="https://example.com/2-2">0</a></td>
+              <td><a href="https://example.com/2-2">0</a></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td><a href="https://example.com/2-2">1</a></td>
+            <td><a href="https://example.com/2-2">1</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><a href="https://example.com/2-2">2</a></td>
+            <td><a href="https://example.com/2-2">2</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><a href="https://example.com/2-2">3</a></td>
+            <td><a href="https://example.com/2-2">3</a></td>
+          </tr>
+            <tr>
+              <th rowspan="4"> Central Library </th>
+              <td>0</td>
+              <td><a href="https://example.com/2-2">0</a></td>
+              <td><a href="https://example.com/2-2">0</a></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td><a href="https://example.com/2-2">1</a></td>
+            <td><a href="https://example.com/2-2">1</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><a href="https://example.com/2-2">2</a></td>
+            <td><a href="https://example.com/2-2">2</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><a href="https://example.com/2-2">3</a></td>
+            <td><a href="https://example.com/2-2">3</a></td>
+          </tr>
+            <tr>
+              <th rowspan="4"> 1st Dormitory </th>
+              <td>0</td>
+              <td><a href="https://example.com/2-2">0</a></td>
+              <td><a href="https://example.com/2-2">0</a></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td><a href="https://example.com/2-2">1</a></td>
+            <td><a href="https://example.com/2-2">1</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><a href="https://example.com/2-2">2</a></td>
+            <td><a href="https://example.com/2-2">2</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><a href="https://example.com/2-2">3</a></td>
+            <td><a href="https://example.com/2-2">3</a></td>
+          </tr>
+            <tr>
+              <th rowspan="4"> 2nd Dormitory </th>
+              <td>0</td>
+              <td><a href="https://example.com/2-2">0</a></td>
+              <td><a href="https://example.com/2-2">0</a></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td><a href="https://example.com/2-2">1</a></td>
+            <td><a href="https://example.com/2-2">1</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><a href="https://example.com/2-2">2</a></td>
+            <td><a href="https://example.com/2-2">2</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><a href="https://example.com/2-2">3</a></td>
+            <td><a href="https://example.com/2-2">3</a></td>
+          </tr>
+            <tr>
+              <th rowspan="4"> Parking Lot & Peace Amphitheater </th>
+              <td>0</td>
+              <td><a href="https://example.com/2-2">0</a></td>
+              <td><a href="https://example.com/2-2">0</a></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td><a href="https://example.com/2-2">1</a></td>
+            <td><a href="https://example.com/2-2">1</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><a href="https://example.com/2-2">2</a></td>
+            <td><a href="https://example.com/2-2">2</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><a href="https://example.com/2-2">3</a></td>
+            <td><a href="https://example.com/2-2">3</a></td>
+          </tr>
+            <!-- More rows as needed -->
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Dataset Distribution Area -->
+
+
+<!-- License -->
+<section class="container is-max-desktop">
+  <div class="hero-body">
+    <h2 class="title">License</h2>
+    <div class="license-text"> 
+      The PAIR360 dataset is provided under the Open Database License (available <a href="https://opendatacommons.org/licenses/odbl/1-0/">here</a>).
+      This means that you are free to use, distribute, modify and create derivative works from this dataset, provided that you give appropriate credit to our work. In addition, any adapted version of this dataset that is used publicly must be released under the same licence, and any redistribution must remain open.
+      When using the PAIR360 dataset, please ensure that you acknowledge our work by citing the referenced paper.
+    </div>
+  </div>
+</section>
+<!-- End License -->
+
+
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
