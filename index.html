@@ -63,7 +63,7 @@
       margin-left: auto; 
       margin-right: auto; 
       display: block;
-      width: 70%; /* 표의 너비를 70%로 설정 */
+      width: 60%; /* 표의 너비를 70%로 설정 */
       font-size: 16px; /* 글자 크기를 조정 */
     }
     .item th, .item td {
@@ -76,8 +76,14 @@
       background-color: #D3D3D3; /* 이 부분에서 회색 배경색을 지정합니다. */
       padding: 15px; /* 이 부분에서 텍스트와 테두리 사이의 여백을 지정합니다. */
     }
+    .second-image {
+      max-width: 50%; /* 원하는 크기로 설정 */
+    }
+
   </style>
 
+  
+  
 </head>
 <body>
 
@@ -161,21 +167,48 @@
 
 
 <!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/downhill_projection.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Panorama projection sample video: Sequence0 in College of Physical Education area. 
-      </h2>
+
+<!-- End teaser video -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel" style="text-align: center;">
+        <div class="item">
+          <video poster="" id="tree" autoplay controls muted loop height="100%">
+            <!-- Your video here -->
+            <source src="static/videos/downhill_projection.mp4"
+            type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+            Panorama projection sample video: Sequence0 in College of Physical Education area. 
+          </h2>
+        </div>
+        <div class="item">
+          <video poster="" id="tree" autoplay controls muted loop height="100%">
+            <!-- Your video here -->
+            <source src="static/videos/1104-bio-3.mp4"
+            type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+            Panorama projection sample video: Sequence3 in College of Life Science area. 
+          </h2>
+        </div>
+        <div class="item">
+          <video poster="" id="tree" autoplay controls muted loop height="100%">
+            <!-- Your video here -->
+            <source src="static/videos/1104-engineer-0.mp4"
+            type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+            Panorama projection sample video: Sequence0 in College of Engineering area. 
+          </h2>
+        </div>
+        <!-- Add as many items as you like -->
+      </div>
     </div>
   </div>
+</div>
 </section>
-<!-- End teaser video -->
 
 <style>
   .column h3 {
@@ -307,18 +340,13 @@
         </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/insta_cam.png" alt="MY ALT TEXT"/>
+        <img class="second-image" src="static/images/insta_cam.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
           The Insta360 pro2 has six lenses, and they store original fisheye video. we store extract fisheye images and saved each origin'#' folder.
           The z-axis is front of camera.
         </h2>
       </div>
     </div>
-    <!-- <h2 class="title">Sensor Setup & Data Area</h2>
-    <img src="static\images\sensor_setup_data_area.jpg" >
-    <h2 class="subtitle has-text-centered">
-      Directory layout for a single sequence.  
-    </h2> -->
   </div>
 </section>
 <!-- Sensor Setup & Data Area -->
@@ -328,7 +356,7 @@
 <!-- <section class="hero is-small"> -->
 <section class="container is-max-desktop">
   <div class="hero-body">
-    <h2 class="title">Data Distribution</h2>
+    <h2 class="title">Download</h2>
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel" style="text-align: center;">
         <div class="item">
@@ -347,149 +375,99 @@
             <tr>
                 <th rowspan="4"> College of Engineering </th>
                 <td>0</td>
-                <td><a href="https://example.com/2-2">0</a></td>
-                <td><a href="https://example.com/2-2">0</a></td>
+                <td><a href="http://airlabdata.synology.me:5000/sharing/XdBw2IFqy">Dataset</a></td>
+                <td><a href="http://airlabdata.synology.me:5000/sharing/0bn7neO5b">Cali_test</a></td>
             </tr>
             <tr>
               <td>1</td>
-              <td><a href="https://example.com/2-2">1</a></td>
+              <td><a href="http://airlabdata.synology.me:5000/sharing/7Goj05J0U">Dataset</a></td>
               <td><a href="https://example.com/2-2">1</a></td>
             </tr>
             <tr>
               <td>2</td>
-              <td><a href="https://example.com/2-2">2</a></td>
+              <td><a href="http://airlabdata.synology.me:5000/sharing/3h5UcIOil">Dataset</a></td>
               <td><a href="https://example.com/2-2">2</a></td>
             </tr>
             <tr>
               <td>3</td>
-              <td><a href="https://example.com/2-2">3</a></td>
+              <td><a href="http://airlabdata.synology.me:5000/sharing/YpKaAuwtr">Dataset</a></td>
               <td><a href="https://example.com/2-2">3</a></td>
             </tr>
             <tr>
-                <th rowspan="4"> College of Life Science  </th>
+                <th rowspan="5"> College of Life Science  </th>
                 <td>0</td>
-                <td><a href="https://example.com/2-2">0</a></td>
+                <td><a href="http://airlabdata.synology.me:5000/sharing/BKjAIreTa">Dataset</a></td>
                 <td><a href="https://example.com/2-2">0</a></td>
             </tr>
             <tr>
               <td>1</td>
-              <td><a href="https://example.com/2-2">1</a></td>
+              <td><a href="http://airlabdata.synology.me:5000/sharing/2C3v9P96i">Dataset</a></td>
               <td><a href="https://example.com/2-2">1</a></td>
             </tr>
             <tr>
               <td>2</td>
-              <td><a href="https://example.com/2-2">2</a></td>
+              <td><a href="http://airlabdata.synology.me:5000/sharing/yfbML6TSp">Dataset</a></td>
               <td><a href="https://example.com/2-2">2</a></td>
             </tr>
             <tr>
               <td>3</td>
-              <td><a href="https://example.com/2-2">3</a></td>
+              <td><a href="http://airlabdata.synology.me:5000/sharing/z4PyNtaq9">Dataset</a></td>
               <td><a href="https://example.com/2-2">3</a></td>
             </tr>
             <tr>
-              <th rowspan="4"> College of Physical Education </th>
+              <td>4</td>
+              <td><a href="http://airlabdata.synology.me:5000/sharing/bKDPaNPxI">Dataset</a></td>
+              <td><a href="https://example.com/2-2">3</a></td>
+            </tr>
+            <tr>
+              <th rowspan="3"> College of Physical Education </th>
               <td>0</td>
-              <td><a href="https://example.com/2-2">0</a></td>
+              <td><a href="http://airlabdata.synology.me:5000/sharing/NpRJbVPlx">Dataset</a></td>
               <td><a href="https://example.com/2-2">0</a></td>
           </tr>
           <tr>
             <td>1</td>
-            <td><a href="https://example.com/2-2">1</a></td>
+            <td><a href="http://airlabdata.synology.me:5000/sharing/mdo10pD0Y">Dataset</a></td>
             <td><a href="https://example.com/2-2">1</a></td>
           </tr>
           <tr>
             <td>2</td>
-            <td><a href="https://example.com/2-2">2</a></td>
+            <td><a href="http://airlabdata.synology.me:5000/sharing/RHldym2A7">Dataset</a></td>
             <td><a href="https://example.com/2-2">2</a></td>
           </tr>
           <tr>
-            <td>3</td>
-            <td><a href="https://example.com/2-2">3</a></td>
-            <td><a href="https://example.com/2-2">3</a></td>
+              <th rowspan="1"> Central Library </th>
+              <td>0</td>
+              <td><a href="http://airlabdata.synology.me:5000/sharing/6N4AQoLFA">Dataset</a></td>
+              <td><a href="https://example.com/2-2">0</a></td>
+          </tr>
+          <tr>
+              <th rowspan="2"> 1st Dormitory </th>
+              <td>0</td>
+              <td><a href="http://airlabdata.synology.me:5000/sharing/pKtPXkD9I">Dataset</a></td>
+              <td><a href="https://example.com/2-2">0</a></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td><a href="http://airlabdata.synology.me:5000/sharing/35hCoI9PP">Dataset</a></td>
+            <td><a href="https://example.com/2-2">1</a></td>
           </tr>
             <tr>
-              <th rowspan="4"> Central Library </th>
+              <th rowspan="1"> 2nd Dormitory </th>
               <td>0</td>
+              <td><a href="http://airlabdata.synology.me:5000/sharing/BparLJ7wb">Dataset</a></td>
               <td><a href="https://example.com/2-2">0</a></td>
+          </tr>
+          <tr>
+              <th rowspan="2"> Parking Lot & Peace Amphitheater </th>
+              <td>0</td>
+              <td><a href="http://airlabdata.synology.me:5000/sharing/soFGJa9Dk">Dataset</a></td>
               <td><a href="https://example.com/2-2">0</a></td>
           </tr>
           <tr>
             <td>1</td>
+            <td><a href="http://airlabdata.synology.me:5000/sharing/9RoZVqY1a">Dataset</a></td>
             <td><a href="https://example.com/2-2">1</a></td>
-            <td><a href="https://example.com/2-2">1</a></td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td><a href="https://example.com/2-2">2</a></td>
-            <td><a href="https://example.com/2-2">2</a></td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td><a href="https://example.com/2-2">3</a></td>
-            <td><a href="https://example.com/2-2">3</a></td>
-          </tr>
-            <tr>
-              <th rowspan="4"> 1st Dormitory </th>
-              <td>0</td>
-              <td><a href="https://example.com/2-2">0</a></td>
-              <td><a href="https://example.com/2-2">0</a></td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td><a href="https://example.com/2-2">1</a></td>
-            <td><a href="https://example.com/2-2">1</a></td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td><a href="https://example.com/2-2">2</a></td>
-            <td><a href="https://example.com/2-2">2</a></td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td><a href="https://example.com/2-2">3</a></td>
-            <td><a href="https://example.com/2-2">3</a></td>
-          </tr>
-            <tr>
-              <th rowspan="4"> 2nd Dormitory </th>
-              <td>0</td>
-              <td><a href="https://example.com/2-2">0</a></td>
-              <td><a href="https://example.com/2-2">0</a></td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td><a href="https://example.com/2-2">1</a></td>
-            <td><a href="https://example.com/2-2">1</a></td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td><a href="https://example.com/2-2">2</a></td>
-            <td><a href="https://example.com/2-2">2</a></td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td><a href="https://example.com/2-2">3</a></td>
-            <td><a href="https://example.com/2-2">3</a></td>
-          </tr>
-            <tr>
-              <th rowspan="4"> Parking Lot & Peace Amphitheater </th>
-              <td>0</td>
-              <td><a href="https://example.com/2-2">0</a></td>
-              <td><a href="https://example.com/2-2">0</a></td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td><a href="https://example.com/2-2">1</a></td>
-            <td><a href="https://example.com/2-2">1</a></td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td><a href="https://example.com/2-2">2</a></td>
-            <td><a href="https://example.com/2-2">2</a></td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td><a href="https://example.com/2-2">3</a></td>
-            <td><a href="https://example.com/2-2">3</a></td>
           </tr>
             <!-- More rows as needed -->
           </table>
