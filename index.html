@@ -69,8 +69,29 @@
     .item th, .item td {
       padding: 10px; /* 셀의 안쪽 여백을 넓힙니다. */
     }
+
   </style>
-  
+  <style>
+    .tool_table, .tool_table th, .tool_table td {
+      border: 2px solid black; /* 테두리 색상을 파란색으로 변경하고, 두께를 2px로 조정 */
+      border-collapse: collapse;
+    }
+    .tool_table {
+      margin: 20px auto; /* 상하 마진을 20px, 좌우 마진을 자동으로 설정하여 가운데 정렬 */
+      display: block;
+      width: 70%; /* 표의 너비를 50%로 변경 */
+      background-color: white; /* 배경색을 연회색으로 설정 */
+    }
+    .tool_table th, .tool_table td {
+      padding: 20px; /* 셀의 안쪽 여백을 20px로 넓힙니다. */
+      text-align: left; /* 텍스트를 왼쪽 정렬합니다. */
+    }
+    .tool_table th {
+      background-color: white; /* 헤더 배경색을 파란색으로 설정 */
+      color: black; /* 헤더 글자 색상을 흰색으로 설정 */
+    }
+  </style>
+
   <style>
     .license-text {
       background-color: #D3D3D3; /* 이 부분에서 회색 배경색을 지정합니다. */
@@ -717,18 +738,32 @@
 <section class="container is-max-desktop">
   <div class="hero-body">
     <h2 class="title">Tools</h2>
-    <div class="license-text"> 
-      <a href="static\code\pcd2bag.py" download="bcd2bag.py"> bcd2bag.py</a>
-    </div>
-    <div class="license-text"> 
-      <a href="static\code\Lidar_fisheye_projection" download="Lidar_fisheye_projection"> Lidar_fisheye_projection</a>
-    </div>
-    <div class="license-text"> 
-      <a href="static\code\LiDAR_pano_projection.py" download="LiDAR_pano_projection.py"> LiDAR_pano_projection.py</a>
-    </div>
-    <div class="license-text"> 
-      <a href="static\code\GPS_mapping.py" download="GPS_mapping.py"> GPS_mapping.py</a>
-    </div>
+    <!-- <div class="license-text">  -->
+      <div class="tool_table">
+      <table>
+        <tr>
+          <th>File</th>
+          <th>Description</th>
+        </tr>
+        <!-- Table content -->
+        <tr>
+            <th><a href="static\code\pcd2bag.py" download="bcd2bag.py">   bcd2bag.py  </a> </th>
+            <td>Convert pcd files, GPS.csv and GYRO.csv file to ROSbag</td>
+        </tr>
+        <tr>
+          <th><a href="static\code\Lidar_fisheye_projection.py" download="Lidar_fisheye_projection.py">   Lidar_fisheye_projection.py  </a></th>
+          <td> Project onto fisheye image</td>
+        </tr>
+        <tr>
+          <th><a href="static\code\Lidar_pano_projection.py" download="Lidar_pano_projection.py"> Lidar_pano_projection.py </a></th>
+          <td> Project onto panorama image </td>
+        </tr>
+        <tr>
+          <th><a href="static\code\GPS_mapping.py" download="GPS_mapping.py"> GPS_mapping.py</a></th>
+          <td> Map GPS data and save html file </td>
+        </tr>
+      </div>
+      </table>
   </div>
 </section>
 <!-- End Tools -->
