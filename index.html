@@ -71,7 +71,7 @@
     }
     .responsive-image {
       width: 600px;  /* 원하는 너비 */
-      height: 350px; /* 원하는 높이 */
+      height: 300px; /* 원하는 높이 */
       object-fit: fill; /* 이미지를 비율 유지하며 잘림 방지 */
       margin: 0 auto; /* 중앙 정렬 */
     }
@@ -103,11 +103,47 @@
       padding: 15px; /* 이 부분에서 텍스트와 테두리 사이의 여백을 지정합니다. */
     }
     .second-image {
-      max-width: 50%; /* 원하는 크기로 설정 */
+      display: flex;
+      margin: auto;
+      max-width: 450px; /* 원하는 크기로 설정 */
+      max-height: 600px;
+      justify-content: center; /* 중앙 정렬 */
+      align-items: center; /* 중앙 정렬 */
+      object-fit: fill; /* 이미지를 비율 유지하며 잘림 방지 */
     }
-
   </style>
 
+  <style>
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 20px; /* 그룹 간의 간격 */
+  }
+  
+  .group {
+      background: #f9f9f9; /* 배경색 */
+      padding: 20px; /* 여백 */
+      border-radius: 10px; /* 모서리 둥글게 */
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+      overflow-y: auto; /* 세로 스크롤 추가 */
+      max-height: 300px; /* 최대 높이 설정 */
+  }
+  
+  .group h2 {
+      margin-bottom: 10px; /* 제목과 이미지 간의 간격 */
+  }
+  
+  .image-item {
+      display: inline-block; /* 이미지 항목을 인라인 블록으로 설정 */
+      margin: 5px; /* 이미지 간의 간격 */
+  }
+  
+  .image-item img {
+      width: 100px; /* 이미지 너비 */
+      height: auto; /* 비율 유지 */
+      border-radius: 5px; /* 모서리 둥글게 */
+  }
+  </style>
   
   
 </head>
@@ -320,46 +356,6 @@
 </section>
 <!-- End paper abstract -->
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel" style="text-align: center;">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/0825-domr2-0704.png" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Traversal 1, 2nd Dormitory area.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/1007-ot-0725.png" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Traversal 1, Parking & Peace Amphitheater area.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/1104-engineer-0789.png" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Traversal 2, College of Engineering area.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/1109-library-2849.png" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Traversal 3, Central Library area.
-        </h2>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
 <!-- Data Directory-->
 <section class="container is-max-desktop">
   <div class="hero-body">
@@ -402,13 +398,214 @@
 <!-- Sensor Setup & Data Area -->
 <section class="container is-max-desktop">
   <div class="hero-body">
-    <!-- <h2 class="title">Data Directory</h2> -->
+    <h2 class="title">Sensor Setup & Data Area</h2>
     <img src="static\images\sensor_setup_data_area.jpg" alt="MY ALT TEXT"/>
     <!-- <h2 class="subtitle has-text-centered">
       Sensor Setup & Area Layout.  
     </h2> -->
+    <h2 class="title">Sequences</h2>
+    <h3>Sequence0: red / Sequence1: orange / Sequence2: green / Sequence3: blue / Sequence4: purple / Sequence5: black</h3>
+    <h3 class="subtitle">Traversal 1</h3>
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel" style="text-align: center;">
+        <div class="item">
+          <!-- Your image here -->
+          <img class="second-image" src="static\images\sequence\t1\fig8_t1.png" >
+          <h2 class="subtitle has-text-centered">
+            Each Trajectories of all areas in traversal 1
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img class="second-image" src="static\images\sequence\t1\engineer.png" alt="engineer trajectory"/>
+          <h2 class="subtitle has-text-centered">
+            College of Engineer
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img class="second-image" src="static\images\sequence\t1\bio.png" alt="engineer trajectory"/>
+          <h2 class="subtitle has-text-centered">
+            College of Life Science
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img class="second-image" src="static\images\sequence\t1\sport.png" alt="engineer trajectory"/>
+          <h2 class="subtitle has-text-centered">
+            College of Physical Education
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img class="second-image" src="static\images\sequence\t1\library.png" alt="engineer trajectory"/>
+          <h2 class="subtitle has-text-centered">
+            Central Library
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img class="second-image" src="static\images\sequence\t1\1stdorm.png" alt="engineer trajectory"/>
+          <h2 class="subtitle has-text-centered">
+            1st Dormitory 	
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img class="second-image" src="static\images\sequence\t1\2nddorm.png" alt="engineer trajectory"/>
+          <h2 class="subtitle has-text-centered">
+            2nd Dormitory
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img class="second-image" src="static\images\sequence\t1\parking.png" alt="engineer trajectory"/>
+          <h2 class="subtitle has-text-centered">
+            Parking Lot & Peace Amphitheater 
+          </h2>
+      </div>
+      </div>
+    </div>
+    <h3 class="subtitle">Traversal 2</h3>
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel" style="text-align: center;">
+        <div class="item">
+          <!-- Your image here -->
+          <img class="second-image" src="static\images\sequence\t2\fig8_t2.png" >
+          <h2 class="subtitle has-text-centered">
+            Each Trajectories of all areas in traversal 2
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img class="second-image" src="static\images\sequence\t2\engineer.png" alt="engineer trajectory"/>
+          <h2 class="subtitle has-text-centered">
+            College of Engineer
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img class="second-image" src="static\images\sequence\t2\bio.png" alt="engineer trajectory"/>
+          <h2 class="subtitle has-text-centered">
+            College of Life Science
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img class="second-image" src="static\images\sequence\t2\sport.png" alt="engineer trajectory"/>
+          <h2 class="subtitle has-text-centered">
+            College of Physical Education
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img class="second-image" src="static\images\sequence\t2\library.png" alt="engineer trajectory"/>
+          <h2 class="subtitle has-text-centered">
+            Central Library
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img class="second-image" src="static\images\sequence\t2\1stdorm.png" alt="engineer trajectory"/>
+          <h2 class="subtitle has-text-centered">
+            1st Dormitory 	
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img class="second-image" src="static\images\sequence\t2\2nddorm.png" alt="engineer trajectory"/>
+          <h2 class="subtitle has-text-centered">
+            2nd Dormitory
+          </h2>
+        </div>
+      </div>
+    </div>
+    <h3 class="subtitle">Traversal 3</h3>
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel" style="text-align: center;">
+        <div class="item">
+          <!-- Your image here -->
+          <img class="second-image" src="static\images\sequence\t3\fig8_t3.png" >
+          <h2 class="subtitle has-text-centered">
+            Each Trajectories of all areas in traversal 3
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img class="second-image" src="static\images\sequence\t3\engineer.png" alt="engineer trajectory"/>
+          <h2 class="subtitle has-text-centered">
+            College of Engineer
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img class="second-image" src="static\images\sequence\t3\bio.png" alt="engineer trajectory"/>
+          <h2 class="subtitle has-text-centered">
+            College of Life Science
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img class="second-image" src="static\images\sequence\t3\sport.png" alt="engineer trajectory"/>
+          <h2 class="subtitle has-text-centered">
+            College of Physical Education
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img class="second-image" src="static\images\sequence\t3\library.png" alt="engineer trajectory"/>
+          <h2 class="subtitle has-text-centered">
+            Central Library
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img class="second-image" src="static\images\sequence\t3\1stdorm.png" alt="engineer trajectory"/>
+          <h2 class="subtitle has-text-centered">
+            1st Dormitory 	
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img class="second-image" src="static\images\sequence\t3\2nddorm.png" alt="engineer trajectory"/>
+          <h2 class="subtitle has-text-centered">
+            2nd Dormitory
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img class="second-image" src="static\images\sequence\t3\parking.png" alt="engineer trajectory"/>
+          <h2 class="subtitle has-text-centered">
+            Parking Lot & Peace Amphitheater 
+          </h2>
+      </div>
+      </div>
+    </div>
+  </div>
+  <!-- </div> -->
+</section>
+
+<!-- Image carousel -->
+<!-- <section class="hero is-small"> -->
+<section class="container is-max-desktop">
+  <div class="hero-body">
+    <h2 class="title">Dataset</h2>
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel" style="text-align: center;">
+        <div class="item">
+          <img src="static/images/eachArea/sample/engineer/3x3.png" alt="engineer" class="responsive-image"/>
+        </div>
+        <div class="item">
+          <img src="static/images/eachArea/sample/sport/3x3.png" alt="engineer" class="responsive-image"/>
+        </div>
+        <div class="item">
+          <img src="static/images/eachArea/sample/1stdorm/3x3.png" alt="engineer" class="responsive-image"/>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
+<!-- End image carousel -->
 
 <!-- Dataset Distribution Area -->
 <section class="container is-max-desktop">
