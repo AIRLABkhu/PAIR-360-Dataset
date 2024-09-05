@@ -111,8 +111,17 @@
     .second-image {
       display: flex;
       margin: auto;
-      max-width: 450px; /* 원하는 크기로 설정 */
-      max-height: 600px;
+      max-width: 300px; /* 원하는 크기로 설정 */
+      max-height: 450px;
+      justify-content: center; /* 중앙 정렬 */
+      align-items: center; /* 중앙 정렬 */
+      object-fit: fill; /* 이미지를 비율 유지하며 잘림 방지 */
+    }
+    .map-image {
+      display: flex;
+      margin: auto;
+      width: 300px; /* 원하는 크기로 설정 */
+      height: 450px;
       justify-content: center; /* 중앙 정렬 */
       align-items: center; /* 중앙 정렬 */
       object-fit: fill; /* 이미지를 비율 유지하며 잘림 방지 */
@@ -297,8 +306,8 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">PAIR360 Dataset</h2>
         <ul>        
-          <li>This dataset provides 360 equirectangular image set with LiDAR point cloud from <br>
-          Insta360 pro2 - Velodyne VLP-32C system </li>
+          <li>This dataset provides 360 equirectangular image set with LiDAR point cloud from Insta360 pro2 - Velodyne VLP-32C system. </li>
+          <li> Moreover, We use pre-trained foundation model, Depth-Anything, to make depth map and semantic segmentation labels. </li>
         </ul>
 
         <div>
@@ -368,21 +377,20 @@
     <h2 class="title">Data Directory</h2>
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel" style="text-align: center;">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static\images\directory_structure_IMU.png" >
-        <h2 class="subtitle has-text-centered">
-          Sensor Setup & Area Layout.  
-        </h2>
+        <div class="item">
+          <img src="static\images\directory_structure_IMU.png" >
+          <h2 class="subtitle has-text-centered">
+            Sensor Setup & Area Layout.  
+          </h2>
         </div>
         <div class="item">
-          <!-- Your image here -->
           <img class="second-image" src="static/images/insta_cam.png" alt="MY ALT TEXT"/>
           <h2 class="subtitle has-text-centered">
             The Insta360 pro2 has six lenses, and they store original fisheye video. we store extract fisheye images and saved each origin'#' folder.
             The z-axis is front of camera.
           </h2>
         </div>
+      </div>
     </div>
   </div>
 </section>
@@ -410,185 +418,29 @@
       Sensor Setup & Area Layout.  
     </h2> -->
     <h2 class="title">Sequences</h2>
-    <h3>Sequence0: red / Sequence1: orange / Sequence2: green / Sequence3: blue / Sequence4: purple / Sequence5: black</h3>
-    <h3 class="subtitle">Traversal 1</h3>
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel" style="text-align: center;">
-        <div class="item">
-          <!-- Your image here -->
-          <img class="second-image" src="static\images\sequence\t1\fig8_t1.png" >
+    <!-- <h3>Sequence0: red / Sequence1: orange / Sequence2: green / Sequence3: blue / Sequence4: purple / Sequence5: black</h3> -->
+    <!-- <h3 class="subtitle">Traversal 1</h3> -->
+    <div class="container" style="display: flex; flex-direction: row; justify-content: space-around; align-items: center;">
+      <div>
+          <img class="map-image" src="static/images/sequence/t1/fig8_t1.png" >
           <h2 class="subtitle has-text-centered">
-            Each Trajectories of all areas in traversal 1
-          </h2>
-        </div>
-        <div class="item">
-          <!-- Your image here -->
-          <img class="second-image" src="static\images\sequence\t1\engineer.png" alt="engineer trajectory"/>
-          <h2 class="subtitle has-text-centered">
-            College of Engineer
-          </h2>
-        </div>
-        <div class="item">
-          <!-- Your image here -->
-          <img class="second-image" src="static\images\sequence\t1\bio.png" alt="engineer trajectory"/>
-          <h2 class="subtitle has-text-centered">
-            College of Life Science
-          </h2>
-        </div>
-        <div class="item">
-          <!-- Your image here -->
-          <img class="second-image" src="static\images\sequence\t1\sport.png" alt="engineer trajectory"/>
-          <h2 class="subtitle has-text-centered">
-            College of Physical Education
-          </h2>
-        </div>
-        <div class="item">
-          <!-- Your image here -->
-          <img class="second-image" src="static\images\sequence\t1\library.png" alt="engineer trajectory"/>
-          <h2 class="subtitle has-text-centered">
-            Central Library
-          </h2>
-        </div>
-        <div class="item">
-          <!-- Your image here -->
-          <img class="second-image" src="static\images\sequence\t1\1stdorm.png" alt="engineer trajectory"/>
-          <h2 class="subtitle has-text-centered">
-            1st Dormitory 	
-          </h2>
-        </div>
-        <div class="item">
-          <!-- Your image here -->
-          <img class="second-image" src="static\images\sequence\t1\2nddorm.png" alt="engineer trajectory"/>
-          <h2 class="subtitle has-text-centered">
-            2nd Dormitory
-          </h2>
-        </div>
-        <div class="item">
-          <!-- Your image here -->
-          <img class="second-image" src="static\images\sequence\t1\parking.png" alt="engineer trajectory"/>
-          <h2 class="subtitle has-text-centered">
-            Parking Lot & Peace Amphitheater 
+            GPS Trajectories in traversal 1
           </h2>
       </div>
-      </div>
-    </div>
-    <h3 class="subtitle">Traversal 2</h3>
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel" style="text-align: center;">
-        <div class="item">
-          <!-- Your image here -->
-          <img class="second-image" src="static\images\sequence\t2\fig8_t2.png" >
+      <div>
+          <img class="map-image" src="static/images/sequence/t2/fig8_t2.png" >
           <h2 class="subtitle has-text-centered">
-            Each Trajectories of all areas in traversal 2
-          </h2>
-        </div>
-        <div class="item">
-          <!-- Your image here -->
-          <img class="second-image" src="static\images\sequence\t2\engineer.png" alt="engineer trajectory"/>
-          <h2 class="subtitle has-text-centered">
-            College of Engineer
-          </h2>
-        </div>
-        <div class="item">
-          <!-- Your image here -->
-          <img class="second-image" src="static\images\sequence\t2\bio.png" alt="engineer trajectory"/>
-          <h2 class="subtitle has-text-centered">
-            College of Life Science
-          </h2>
-        </div>
-        <div class="item">
-          <!-- Your image here -->
-          <img class="second-image" src="static\images\sequence\t2\sport.png" alt="engineer trajectory"/>
-          <h2 class="subtitle has-text-centered">
-            College of Physical Education
-          </h2>
-        </div>
-        <div class="item">
-          <!-- Your image here -->
-          <img class="second-image" src="static\images\sequence\t2\library.png" alt="engineer trajectory"/>
-          <h2 class="subtitle has-text-centered">
-            Central Library
-          </h2>
-        </div>
-        <div class="item">
-          <!-- Your image here -->
-          <img class="second-image" src="static\images\sequence\t2\1stdorm.png" alt="engineer trajectory"/>
-          <h2 class="subtitle has-text-centered">
-            1st Dormitory 	
-          </h2>
-        </div>
-        <div class="item">
-          <!-- Your image here -->
-          <img class="second-image" src="static\images\sequence\t2\2nddorm.png" alt="engineer trajectory"/>
-          <h2 class="subtitle has-text-centered">
-            2nd Dormitory
-          </h2>
-        </div>
-      </div>
-    </div>
-    <h3 class="subtitle">Traversal 3</h3>
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel" style="text-align: center;">
-        <div class="item">
-          <!-- Your image here -->
-          <img class="second-image" src="static\images\sequence\t3\fig8_t3.png" >
-          <h2 class="subtitle has-text-centered">
-            Each Trajectories of all areas in traversal 3
-          </h2>
-        </div>
-        <div class="item">
-          <!-- Your image here -->
-          <img class="second-image" src="static\images\sequence\t3\engineer.png" alt="engineer trajectory"/>
-          <h2 class="subtitle has-text-centered">
-            College of Engineer
-          </h2>
-        </div>
-        <div class="item">
-          <!-- Your image here -->
-          <img class="second-image" src="static\images\sequence\t3\bio.png" alt="engineer trajectory"/>
-          <h2 class="subtitle has-text-centered">
-            College of Life Science
-          </h2>
-        </div>
-        <div class="item">
-          <!-- Your image here -->
-          <img class="second-image" src="static\images\sequence\t3\sport.png" alt="engineer trajectory"/>
-          <h2 class="subtitle has-text-centered">
-            College of Physical Education
-          </h2>
-        </div>
-        <div class="item">
-          <!-- Your image here -->
-          <img class="second-image" src="static\images\sequence\t3\library.png" alt="engineer trajectory"/>
-          <h2 class="subtitle has-text-centered">
-            Central Library
-          </h2>
-        </div>
-        <div class="item">
-          <!-- Your image here -->
-          <img class="second-image" src="static\images\sequence\t3\1stdorm.png" alt="engineer trajectory"/>
-          <h2 class="subtitle has-text-centered">
-            1st Dormitory 	
-          </h2>
-        </div>
-        <div class="item">
-          <!-- Your image here -->
-          <img class="second-image" src="static\images\sequence\t3\2nddorm.png" alt="engineer trajectory"/>
-          <h2 class="subtitle has-text-centered">
-            2nd Dormitory
-          </h2>
-        </div>
-        <div class="item">
-          <!-- Your image here -->
-          <img class="second-image" src="static\images\sequence\t3\parking.png" alt="engineer trajectory"/>
-          <h2 class="subtitle has-text-centered">
-            Parking Lot & Peace Amphitheater 
+            GPS Trajectories in traversal 2
           </h2>
       </div>
+      <div>
+          <img class="map-image" src="static/images/sequence/t3/fig8_t3.png" >
+          <h2 class="subtitle has-text-centered">
+            GPS Trajectories in traversal 3
+          </h2>
       </div>
-    </div>
   </div>
-  <!-- </div> -->
+  </div>
 </section>
 
 <!-- Image carousel -->
